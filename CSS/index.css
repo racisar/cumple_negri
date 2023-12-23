@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url("../Imagenes/betis.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
+
+#image-carousel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 80vh;
+  height: 60vh;
+  overflow: hidden;
+  padding: auto;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.image.active {
+  opacity: 1;
+}
+
+#felicitacion {
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  background-color: hsla(140, 58%, 33%, 0.8); /* Color temático del Betis */
+  border: 2px solid hsla(140, 58%, 33%, 0.8);
+  width: 33.75%;
+  height: 30%;
+}
+
+#botonFeliz {
+  background-color: #008249; /* Verde característico del Betis */
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#botonFeliz:hover {
+  background-color: #006440; /* Verde más oscuro al pasar el mouse */
+}
+
+#mensajeEspecial {
+  display: none;
+  margin-top: 20px;
+  color: #fff;
+  background-color: #0BB363;
+}
+
+#cerrarMensaje {
+  cursor: pointer;
+  color: #e74c3c;
+}
+
+#cerrarMensaje:hover {
+  color: #c0392b;
+}
+
+/* Media queries para hacer ajustes específicos en diferentes tamaños de pantalla */
+@media (max-width: 600px) {
+  #image-carousel {
+    height: 50vh;
+  }
+
+  #felicitacion {
+    width: 80%;
+    max-width: 400px;
+  }
+}
